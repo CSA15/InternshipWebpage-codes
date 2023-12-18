@@ -1,0 +1,104 @@
+{% include 'nav.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    {% load static %}
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <img class="bg" src="{% static '01.png' %}" alt="">
+    <div class="content">
+    <center>
+    <div class="dash">
+      <img class="profile" src="{% static 'profile.png' %}" style="width: 100px; height: 100px;">
+    <h1><i>Welcome Enthusiast {{user.username}}</i></h1>
+    <h4>Your Email ID: {{user.email}}</h4>
+    {% block content %}
+        {% for q in user.user.all %}
+            {% for t in user.duration.all %}
+              {% for z in user.analysis.all %}
+            <table border="1">
+                <tr>
+                    <th>Appliance Name</th>
+                    <th>Quantity</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <td>Geyser</td>
+                    <td>{{q.Gquantity}}</td>
+                    <td>{{t.Gtime}}</td>
+                </tr>
+                <tr>
+                    <td>AC</td>
+                    <td>{{q.ACquantity}}</td>
+                    <td>{{t.ACtime}}</td>
+                </tr>
+                <tr>
+                    <td>Induction Stove</td>
+                    <td>{{q.ISquantity}}</td>
+                    <td>{{t.IStime}}</td>
+                </tr>
+                <tr>
+                    <td>Grinder</td>
+                    <td>{{q.GRquantity}}</td>
+                    <td>{{t.GRtime}}</td>
+                </tr>
+                <tr>
+                    <td>Electric Rice Cooker</td>
+                    <td>{{q.ERCquantity}}</td>
+                    <td>{{t.ERCtime}}</td>
+                </tr>
+                <tr>
+                    <td>Mixer</td>
+                    <td>{{q.Mquantity}}</td>
+                    <td>{{t.Mtime}}</td>
+                </tr>
+                <tr>
+                    <td>Washing Machine</td>
+                    <td>{{q.WMquantity}}</td>
+                    <td>{{t.WMtime}}</td>
+                </tr>
+                <tr>
+                    <td>Microwave</td>
+                    <td>{{q.MCquantity}}</td>
+                    <td>{{t.MCtime}}</td>
+                </tr>
+                <tr>
+                    <td>Television</td>
+                    <td>{{q.TVquantity}}</td>
+                    <td>{{t.TVtime}}</td>
+                </tr>
+                <tr>
+                    <td>Water Filter</td>
+                    <td>{{q.WFuantity}}</td>
+                    <td>{{t.WFtime}}</td>
+                </tr>
+                <tr>
+                    <td>Water Motor</td>
+                    <td>{{q.WMoquantity}}</td>
+                    <td>{{t.WMotime}}</td>
+                </tr>
+                <tr>
+                    Number of people in the house: {{q.people}}
+                    Month: {{z.months}}
+                </tr>
+            </table>
+              {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    {% endblock %}
+    </div>
+    </center>
+    <br>
+  </div>
+</body>
+</html>
