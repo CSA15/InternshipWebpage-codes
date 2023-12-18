@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CER</title>
+	
+	<link rel="icon" href="/cerlogo.png" type="image/png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="{% static 'main.css' %}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+<img class="bg" src="{% static '01.png' %}" alt="">
+<div class="css" style="padding-left:30%">
+	<centre>
+		<h1>Enter Your Data here</h1>
+	</centre>
+Username: <br>
+
+<form method='post' action="{% url 'savedata' %}">
+	
+	<table border="3">
+		<tr>
+			<th>Devices</th>
+			<th>Quantity</th>
+			<th>Duration</th>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="Geyser" name="Geyser" >Geyser
+			<td><input type="number" name="G" placeholder="0" value="0">
+			<td><select name="GT">
+					<option value=0>0 hrs</option>
+					<option value="0.084">10 min</option>
+					<option value="0.25">15 min</option>
+					<option value="0.5">30 min</option>
+					<option value="0.75">45 min</option>
+					<option value="1.0">1 hour</option>
+					<option value="1.5">1.5 hrs</option>
+					<option value="2.0">2 hrs</option>
+					<option value="2.5">2.5 hrs</option>
+					<option value="3.0">3 hrs</option>
+					<option value="3.5">3.5 hrs</option>
+					<option value="4.0">4 hrs</option>
+				  </select>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="AC/Heater" name="AC/Heater" >AC/Heater
+			<td><input type="number" name="ac" placeholder="0" value="0">
+				<td><select name="acT">
+					<option value=0>0 hrs</option>
+					<option value="0.084">10 min</option>
+					<option value="0.25">15 min</option>
+					<option value="0.5">30 min</option>
+					<option value="0.75">45 min</option>
+					<option value="1.0">1 hour</option>
+					<option value="1.5">1.5 hrs</option>
+					<option value="2.0">2 hrs</option>
+					<option value="2.5">2.5 hrs</option>
+					<option value="3.0">3 hrs</option>
+					<option value="3.5">3.5 hrs</option>
+					<option value="4.0">4 hrs</option>
+				  </select>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="Induction Stove" name="Induction Stove" >Induction Stove
+			<td><input type="number" name="Is" placeholder="0" value="0">
+				<td><select name="IsT">
+					<option value=0>0 hrs</option>
+					<option value="0.084">10 min</option>
+					<option value="0.25">15 min</option>
+					<option value="0.5">30 min</option>
+					<option value="0.75">45 min</option>
+					<option value="1.0">1 hour</option>
+					<option value="1.5">1.5 hrs</option>
+					<option value="2.0">2 hrs</option>
+					<option value="2.5">2.5 hrs</option>
+					<option value="3.0">3 hrs</option>
+					<option value="3.5">3.5 hrs</option>
+					<option value="4.0">4 hrs</option>
+				  </select>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="Grinder" name="Grinder" placeholder="0">Grinder
+			<td><input type="number" name="GR" placeholder="0" value="0">
+				<td><select name="GRT">
+					<option value=0>0 hrs</option>
+					<option value="0.084">10 min</option>
+					<option value="0.25">15 min</option>
+					<option value="0.5">30 min</option>
+					<option value="0.75">45 min</option>
+					<option value="1.0">1 hour</option>
+					<option value="1.5">1.5 hrs</option>
+					<option value="2.0">2 hrs</option>
+					<option value="2.5">2.5 hrs</option>
+					<option value="3.0">3 hrs</option>
+					<option value="3.5">3.5 hrs</option>
+					<option value="4.0">4 hrs</option>
+				  </select>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="ElectricRiceCooker" name="ElectricRiceCooker" >Electric Rice Cooker
+			<td><input type="number" name="ERC" placeholder="0" value="0">
+				<td><select name="ERCT">
+					<option value=0>0 hrs</option>
+					<option value="0.084">10 min</option>
+					<option value="0.25">15 min</option>
+					<option value="0.5">30 min</option>
+					<option value="0.75">45 min</option>
+					<option value="1.0">1 hour</option>
+					<option value="1.5">1.5 hrs</option>
+					<option value="2.0">2 hrs</option>
+					<option value="2.5">2.5 hrs</option>
+					<option value="3.0">3 hrs</option>
+					<option value="3.5">3.5 hrs</option>
+					<option value="4.0">4 hrs</option>
+				  </select>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="Mixer" name="Mixer" >Mixer
+			<td><input type="number" name="M" placeholder="0" value="0">
+				<td><select name="MT">
+					<option value=0>0 hrs</option>
+					<option value="0.084">10 min</option>
+					<option value="0.25">15 min</option>
+					<option value="0.5">30 min</option>
+					<option value="0.75">45 min</option>
+					<option value="1.0">1 hour</option>
+					<option value="1.5">1.5 hrs</option>
+					<option value="2.0">2 hrs</option>
+					<option value="2.5">2.5 hrs</option>
+					<option value="3.0">3 hrs</option>
+					<option value="3.5">3.5 hrs</option>
+					<option value="4.0">4 hrs</option>
+				  </select>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="WashingMachine" name="WashingMachine" >Washing Machine
+			<td><input type="number" name="WM" placeholder="0" value="0">
+			<td><select name="WMT">
+					<option value=0>0 hrs</option>
+					<option value="0.084">10 min</option>
+					<option value="0.25">15 min</option>
+					<option value="0.5">30 min</option>
+					<option value="0.75">45 min</option>
+					<option value="1.0">1 hour</option>
+					<option value="1.5">1.5 hrs</option>
+					<option value="2.0">2 hrs</option>
+					<option value="2.5">2.5 hrs</option>
+					<option value="3.0">3 hrs</option>
+					<option value="3.5">3.5 hrs</option>
+					<option value="4.0">4 hrs</option>
+				  </select>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="Microwave" name="Microwave" >Microwave
+			<td><input type="number" name="MC" placeholder="0" value="0">
+			<td><select name="MCT">
+					<option value=0>0 hrs</option>
+					<option value="0.084">10 min</option>
+					<option value="0.25">15 min</option>
+					<option value="0.5">30 min</option>
+					<option value="0.75">45 min</option>
+					<option value="1.0">1 hour</option>
+					<option value="1.5">1.5 hrs</option>
+					<option value="2.0">2 hrs</option>
+					<option value="2.5">2.5 hrs</option>
+					<option value="3.0">3 hrs</option>
+					<option value="3.5">3.5 hrs</option>
+					<option value="4.0">4 hrs</option>
+				  </select>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="Television" name="Television" >Television
+			<td><input type="number" name="TV" placeholder="0" value="0">
+			<td><select name="TVT">
+					<option value=0>0 hrs</option>
+					<option value="0.084">10 min</option>
+					<option value="0.25">15 min</option>
+					<option value="0.5">30 min</option>
+					<option value="0.75">45 min</option>
+					<option value="1.0">1 hour</option>
+					<option value="1.5">1.5 hrs</option>
+					<option value="2.0">2 hrs</option>
+					<option value="2.5">2.5 hrs</option>
+					<option value="3.0">3 hrs</option>
+					<option value="3.5">3.5 hrs</option>
+					<option value="4.0">4 hrs</option>
+				  </select>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="Waterfilter" name="Waterfilter" >Water Filter
+			<td><input type="number" name="WF" placeholder="0" value="0">
+			<td><select name="WFT">
+					<option value=0>0 hrs</option>
+					<option value="0.084">10 min</option>
+					<option value="0.25">15 min</option>
+					<option value="0.5">30 min</option>
+					<option value="0.75">45 min</option>
+					<option value="1.0">1 hour</option>
+					<option value="1.5">1.5 hrs</option>
+					<option value="2.0">2 hrs</option>
+					<option value="2.5">2.5 hrs</option>
+					<option value="3.0">3 hrs</option>
+					<option value="3.5">3.5 hrs</option>
+					<option value="4.0">4 hrs</option>
+				  </select>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="Watermotor" name="Watermotor" >Water Motor
+			<td><input type="number" name="WMo" placeholder="0" value="0">
+			<td><select name="WMoT">
+					<option value=0>0 hrs</option>
+					<option value="0.084">10 min</option>
+					<option value="0.25">15 min</option>
+					<option value="0.5">30 min</option>
+					<option value="0.75">45 min</option>
+					<option value="1.0">1 hour</option>
+					<option value="1.5">1.5 hrs</option>
+					<option value="2.0">2 hrs</option>
+					<option value="2.5">2.5 hrs</option>
+					<option value="3.0">3 hrs</option>
+					<option value="3.5">3.5 hrs</option>
+					<option value="4.0">4 hrs</option>
+				  </select>
+		</tr>
+		<tr>
+				Number of people in the house: <input type="number" name="people" placeholder="0" value="0">
+		</tr>
+		<tr>
+					<select name="months">
+					<option value=1>Jan</option>
+					<option value=2>Feb</option>
+					<option value=3>Mar</option>
+					<option value=4>Apr</option>
+					<option value=5>May</option>
+					<option value=6>June</option>
+					<option value=7>July</option>
+					<option value=8>Aug</option>
+					<option value=9>Sep</option>
+					<option value=10>Oct</option>
+					<option value=11>Nov</option>
+					<option value=12>Dec</option>
+				  </select>
+		</tr>
+	</table>
+	<input type="submit" name="Submit">
+</form>
+</div>
+</body>
+</html>
